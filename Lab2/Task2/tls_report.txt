@@ -1,0 +1,30 @@
+TLS Handshake Process Explained:
+
+1. ClientHello:
+   The client begins by sending a "hello" message indicating supported cipher suites and TLS versions.
+
+2. ServerHello and Certificate:
+   Server selects the cipher suite and sends its public certificate signed by a trusted CA, proving its identity.
+
+3. Key Exchange:
+   Client and server securely exchange keys (using RSA, Diffie-Hellman, or ECC), creating a shared symmetric encryption key.
+
+4. Handshake Completion:
+   After key agreement, both confirm encryption is ready, establishing a secure, encrypted session.
+
+Protection Against MITM Attacks in TLS:
+
+- Certificate Authority (CA) Validation:
+  Trusted third-party CA certificates verify server authenticity.
+
+- Certificate Verification:
+  Browser checks certificate validity against trusted CA lists. A mismatch or invalid certificate alerts the user, blocking potential MITM attackers.
+
+- Secure Key Exchange:
+  Asymmetric cryptography securely exchanges session keys. Without access to private keys, attackers can't decrypt data.
+
+Application of TLS in HTTPS Websites:
+
+- HTTPS uses TLS for secure browser-server communication.
+- Protects sensitive data (user logins, financial details) against interception or modification.
+- Ensures data integrity, authenticity, and privacy during web transactions.
