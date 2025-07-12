@@ -1,0 +1,11 @@
+RSA vs AES Encryption:
+
+Performance:
+- RSA encryption and decryption are computationally intensive and slower.
+- AES is optimized for speed and suitable for encrypting large data volumes quickly.
+
+Use-cases:
+- RSA is ideal for securely exchanging small data (e.g., AES keys, passwords) and digital signatures.
+- AES is commonly used for efficiently encrypting files, databases, and large datasets.
+
+Real-world scenarios combine RSA (for secure key exchange) with AES (for bulk data encryption).
