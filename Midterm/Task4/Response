@@ -1,0 +1,14 @@
+The Output of the script:
+
+Alice public: 16
+Bob public: 20
+Shared key: 6
+
+
+Real-Life Application of Diffie-Hellman:
+Diffie-Hellman key exchange is widely used in real-world applications such as TLS handshakes (e.g., HTTPS websites) and secure messaging apps like Signal, WhatsApp, and Telegram.
+During a TLS handshake, for instance, the server and client use Diffie-Hellman (often elliptic curve-based, like ECDHE) to securely agree on a shared session key—even over an untrusted internet connection.
+Similarly, secure messaging protocols use it to establish ephemeral session keys for every conversation.
+
+Diffie-Hellman is crucial for secure communication because it allows two parties to derive a shared secret key without transmitting it directly.
+This protects the key from interception and enables forward secrecy—meaning even if an attacker compromises long-term keys later, they cannot decrypt past communications.

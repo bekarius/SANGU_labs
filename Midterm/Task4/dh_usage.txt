@@ -1,0 +1,3 @@
+Diffie-Hellman (DH) is widely used in secure communication protocols such as the TLS handshake and Signal protocol.
+It enables two parties to establish a shared secret over an insecure channel without transmitting the secret itself.
+DH is crucial for ensuring forward secrecy, meaning even if keys are compromised later, past communication remains protected.
