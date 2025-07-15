@@ -4,7 +4,7 @@ from Crypto.Hash import SHA256, HMAC
 
 # Original message
 msg = b"Never trust, always verify."
-with open("data_v2.txt", "wb") as f:
+with open("data.txt", "wb") as f:
     f.write(msg)
 
 # SHA-256 Hash
