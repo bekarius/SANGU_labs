@@ -1,0 +1,16 @@
+The Output of the script:
+
+/home/beka/PycharmProjects/SANGU_labs/.venv1/bin/python /home/beka/PycharmProjects/SANGU_labs/Midterm/Task3/task3.py
+SHA-256 Hash: 50dddf8b540a8d16693d741462e1f0431fe43acd4f9c2d006edf7d2e828f7fa4
+HMAC Original: 77ff6d313b1afbac12ceb402d89d5f5dac37faebe581527cff8dc04eb3193df2
+HMAC Tampered: bffe04df89bc7447d080d647cb6142885aeb77f8ac5849cd7def1cddc28c17d9
+HMAC check failed: Integrity compromised.
+
+Explain what happens and why HMAC is important
+
+When you compute an HMAC (Hash-based Message Authentication Code) over a file or message using a secret key, you are essentially generating a digital fingerprint of that message that only someone with the same secret key can reproduce.
+If you change one letter in the original message and recompute the HMAC:
+The new HMAC will be completely different from the original.
+Even a tiny change results in a drastically different hash due to the avalanche effect of cryptographic hash functions.
+
+HMAC is a critical cryptographic tool that helps ensure both data integrity and authenticity. It tells you what was sent and confirms who sent it. If the data changes or the sender is not trusted, the HMAC will not match—and that's the point.
