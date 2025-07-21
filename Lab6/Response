@@ -1,0 +1,28 @@
+Padding Oracle Attack Lab Report
+
+- AES-CBC decryption depends on chaining blocks: P = D(C) XOR previous_block.
+- The oracle checks if decrypted output has valid PKCS#7 padding.
+
+Answers:
+1. The oracle function attempts to decrypt and unpad the ciphertext. If it fails, the padding is invalid.
+2. The IV introduces randomness into the first block, ensuring different outputs for the same plaintext.
+3. AES requires input to be a multiple of the block size; padding ensures this.
+
+Challenges:
+- False positives from padding checks made the last block harder to validate.
+- Manual trimming used to show output where exact padding was wrong.
+
+Conclusion:
+The oracle attack successfully revealed the plaintext using only ciphertext and padding error feedback.
+
+Output:
+
+[*] Ciphertext length: 80 bytes
+[*] IV: 746869735f69735f31365f6279746573
+
+[+] Decryption complete!
+ Recovered plaintext (raw bytes): b"c\x7f~dH~dH&!Huncrd\xfbk\r\xe2\xa2\x9c\x9fl'DTi'\xd2\xfdd\x0cS\xd2\r\xba\xc9Zc\xe0\x079\xe8\x88\x87/!$FN\xe9n\xef\xf7~H\xe9WD\x8a\x84\x14\r"
+ Hex: 637f7e64487e6448262148756e637264fb6b0de2a29c9f6c2744546927d2fd640c53d20dbac95a63e00739e888872f2124464ee96eeff77e48e957448a84140d
+
+ Final plaintext:
+��Zc�9與/!$FN�n��~H�WD��
