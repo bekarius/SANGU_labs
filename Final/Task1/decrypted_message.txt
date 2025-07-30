@@ -1,0 +1,1 @@
+Team communication secured by hybrid encryption.

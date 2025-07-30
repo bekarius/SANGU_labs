@@ -1,0 +1,14 @@
+Signature Verification Explanation
+==================================
+
+When Bob decrypts `signed_message.asc` using GPG, the tool automatically checks for a digital signature. In this case, the output confirms:
+
+    gpg: Good signature from "Alice <alice@sangu.ge>"
+
+This proves two things:
+- The message was created and signed using Alice’s private key, verifying her identity.
+- The message has not been modified in transit. Any tampering would result in a failed or bad signature.
+
+If Alice’s public key is not imported, the signature cannot be validated. If the file is altered, GPG will report a "BAD signature" warning.
+
+Digital signatures thus ensure both authenticity and integrity for secure email communications.
